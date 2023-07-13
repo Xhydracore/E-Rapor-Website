@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "env NODE_ENV=production && node ./bin/www",
+    "start": "env NODE_ENV=production node ./bin/www",
     "dev": "env NODE_ENV=development nodemon ./bin/www",
     "db:makemigrations": "node ./node_modules/sequelize-auto-migrations/bin/makemigration.js",
     "db_reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
