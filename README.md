@@ -10,8 +10,6 @@
 ## Screenshot
 
 1. Signin
-   <img src="screenshot/00. Login All Users.png">
-2. Guru
-   <img src="screenshot/02. Guru (Read).png">
-2. Guru
-   <img src="screenshot/03. Mata Pelajaran.png">
+   <img src="screenshot/Sign In.png">
+2. Dashboard Admin
+   <img src="screenshot/Dashboard.png">
