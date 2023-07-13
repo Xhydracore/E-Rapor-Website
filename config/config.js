@@ -1,6 +1,6 @@
 const fs = require('fs');
 const dotenv = require("dotenv");
-dotenv.config({ path: "config.env" });
+dotenv.config({ path: ".env" });
 module.exports = {
   development: {
     username: 'Deyndrawan',
