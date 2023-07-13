@@ -128,7 +128,7 @@ exports.actionCreate = async (req, res) => {
   }
 }
 
-exports.actionDetele = (req, res) => {
+exports.actionDelete = (req, res) => {
   let { id } = req.params;
   Siswa.findOne({ where: { id: { [Op.eq]: id } } }).then(async (siswa) => {
     let UserId = siswa.UserId
