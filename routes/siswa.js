@@ -13,7 +13,7 @@ const auth = require('../middlewares/auth')
 router.get("/admin/siswa", auth.isLogin, viewSiswa)
 router.post("/admin/siswa/create", actionCreate)
 router.post("/admin/siswa/update/:id", actionUpdate)
-router.post("/admin/siswa/delete/:id", actionDelete)
+router.get("/admin/siswa/delete/:id", actionDelete)
 router.get("/admin/siswa/edit/:id", actionFind)
 
 

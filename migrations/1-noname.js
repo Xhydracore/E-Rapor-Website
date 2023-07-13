@@ -28,7 +28,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "noname",
-    "created": "2023-07-04T06:25:15.252Z",
+    "created": "2023-07-13T09:19:19.104Z",
     "comment": ""
 };
 
@@ -328,7 +328,7 @@ var migrationCommands = function(transaction) {
                     "UserId": {
                         "type": Sequelize.INTEGER,
                         "onUpdate": "CASCADE",
-                        "onDelete": "NO ACTION",
+                        "onDelete": "CASCADE",
                         "references": {
                             "model": "Users",
                             "key": "id"
@@ -491,7 +491,7 @@ var migrationCommands = function(transaction) {
                     "UserId": {
                         "type": Sequelize.INTEGER,
                         "onUpdate": "CASCADE",
-                        "onDelete": "NO ACTION",
+                        "onDelete": "CASCADE",
                         "references": {
                             "model": "Users",
                             "key": "id"

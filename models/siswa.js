@@ -39,7 +39,9 @@ module.exports = (sequelize, DataTypes) => {
   Siswa.associate = function (models) {
     // associations can be defined here
     Siswa.belongsTo(sequelize.models.User, {
-      foreignKey: "UserId"
+      foreignKey: "UserId",
+      onDelete: 'CASCADE',
+      hooks: true
     });
     // hooks sebelum create di uppercase dlu
     Siswa.beforeCreate(siswa => {

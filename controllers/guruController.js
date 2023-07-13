@@ -102,9 +102,8 @@ exports.actionUpdate = async (req, res) => {
   }
 }
 
-exports.actionDetele = (req, res) => {
+exports.actionDelete = (req, res) => {
   let { id } = req.params;
-  console.log(id)
   Guru.findOne({ where: { id: { [Op.eq]: id } } }).then(async (guru) => {
     let UserId = guru.UserId
     const user = await User.findOne({ where: { id: { [Op.eq]: UserId } } })
@@ -113,7 +112,7 @@ exports.actionDetele = (req, res) => {
       res.redirect('/admin/guru');
     })
   }).catch((err) => {
-    console.log(err)
+    console.log(err);
     res.redirect('/admin/guru');
   });
 }

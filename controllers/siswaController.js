@@ -128,16 +128,17 @@ exports.actionCreate = async (req, res) => {
   }
 }
 
-exports.actionDelete = (req, res) => {
+exports.actionDelete = async (req, res) => {
   let { id } = req.params;
   Siswa.findOne({ where: { id: { [Op.eq]: id } } }).then(async (siswa) => {
     let UserId = siswa.UserId
     const user = await User.findOne({ where: { id: { [Op.eq]: UserId } } })
-    await user.destroy()
+    user.destroy()
     siswa.destroy().then(() => {
       res.redirect('/admin/siswa');
     })
   }).catch((err) => {
+    console.log(err);
     res.redirect('/admin/siswa');
   });
 }

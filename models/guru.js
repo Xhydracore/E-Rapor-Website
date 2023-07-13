@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
   Guru.associate = function (models) {
     // associations can be defined here
     Guru.belongsTo(sequelize.models.User, {
-      foreignKey: "UserId"
+      foreignKey: "UserId",
+      onDelete: 'CASCADE',
+      hooks: true
     });
   };
 
