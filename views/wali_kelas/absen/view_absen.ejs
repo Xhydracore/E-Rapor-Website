@@ -1,5 +1,5 @@
-<%- include ../../partials/wali_kelas_layout/header.ejs %>
-<%- include ../../partials/wali_kelas_layout/sidebar.ejs %>
+<%- include ("../../partials/wali_kelas_layout/header.ejs") %>
+<%- include ("../../partials/wali_kelas_layout/sidebar.ejs") %>
 <div class="content-wrapper">
 
   <section class="content">
@@ -16,7 +16,7 @@
               <div style="margin: 0 20px 20px 20px;">
                 <input type="submit" class="btn btn-success" value="Simpan" />
               </div>
-              <%-include table_siswa.ejs %>
+              <%-include ("table_siswa.ejs") %>
             </form>
           </div>
         </div>
@@ -27,7 +27,7 @@
 
 
 
-<%- include ../../partials/wali_kelas_layout/footer.ejs %>
+<%- include ("../../partials/wali_kelas_layout/footer.ejs") %>
 <script>
   $(document).ready(function () {
     // datatable

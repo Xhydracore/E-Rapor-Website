@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     uts: DataTypes.INTEGER,
     uas: DataTypes.INTEGER,
     ket: DataTypes.STRING,
-    nilai_akhir: DataTypes.INTEGER,
+    nilai_akhir: DataTypes.DECIMAL,
     nilai: DataTypes.STRING,
     status: DataTypes.STRING
   }, {});

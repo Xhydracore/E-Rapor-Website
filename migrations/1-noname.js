@@ -28,7 +28,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "noname",
-    "created": "2023-07-13T09:19:19.104Z",
+    "created": "2023-07-17T04:19:52.616Z",
     "comment": ""
 };
 
@@ -174,7 +174,7 @@ var migrationCommands = function(transaction) {
                         "field": "GuruId"
                     },
                     "totalNilai": {
-                        "type": Sequelize.INTEGER,
+                        "type": Sequelize.DECIMAL,
                         "field": "totalNilai"
                     },
                     "createdAt": {
@@ -950,7 +950,7 @@ var migrationCommands = function(transaction) {
                         "field": "ket"
                     },
                     "nilai_akhir": {
-                        "type": Sequelize.INTEGER,
+                        "type": Sequelize.DECIMAL,
                         "field": "nilai_akhir"
                     },
                     "nilai": {
@@ -1061,7 +1061,7 @@ var migrationCommands = function(transaction) {
                         "field": "ket"
                     },
                     "nilai_akhir": {
-                        "type": Sequelize.INTEGER,
+                        "type": Sequelize.DECIMAL,
                         "field": "nilai_akhir"
                     },
                     "nilai": {

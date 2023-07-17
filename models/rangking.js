@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     SiswaId: DataTypes.INTEGER,
     TahunId: DataTypes.INTEGER,
     GuruId: DataTypes.INTEGER,
-    totalNilai: DataTypes.INTEGER
+    totalNilai: DataTypes.DECIMAL
   }, {});
   Rangking.associate = function(models) {
     // associations can be defined here

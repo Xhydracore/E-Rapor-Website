@@ -564,7 +564,7 @@
                 },
                 "nilai_akhir": {
                     "field": "nilai_akhir",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.DECIMAL"
                 },
                 "nilai": {
                     "field": "nilai",
@@ -670,7 +670,7 @@
                 },
                 "nilai_akhir": {
                     "field": "nilai_akhir",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.DECIMAL"
                 },
                 "nilai": {
                     "field": "nilai",
@@ -853,7 +853,7 @@
                 },
                 "totalNilai": {
                     "field": "totalNilai",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.DECIMAL"
                 },
                 "createdAt": {
                     "allowNull": false,

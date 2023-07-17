@@ -1,5 +1,5 @@
-<%- include ../../partials/wali_kelas_layout/header.ejs %>
-<%- include ../../partials/wali_kelas_layout/sidebar.ejs %>
+<%- include ("../../partials/wali_kelas_layout/header.ejs") %>
+<%- include ("../../partials/wali_kelas_layout/sidebar.ejs") %>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -19,7 +19,7 @@
               <div style="margin: 0 20px 20px 20px;">
                 <input type="submit" class="btn btn-success" value="Simpan" />
               </div>
-              <%- include table_input_nilai_sikap.ejs %>
+              <%- include ("table_input_nilai_sikap.ejs") %>
             </form>
           </div>
           <!-- /.box-body -->
@@ -35,7 +35,7 @@
 
 
 
-<%- include ../../partials/wali_kelas_layout/footer.ejs %>
+<%- include ("../../partials/wali_kelas_layout/footer.ejs") %>
 <!-- page script -->
 <script>
   $(document).ready(function () {

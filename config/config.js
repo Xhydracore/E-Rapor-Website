@@ -5,7 +5,7 @@ module.exports = {
   development: {
     username: 'Deyndrawan',
     password: 'digital',
-    database: 'db_eraportk13',
+    database: 'db_e_raportk13',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres',

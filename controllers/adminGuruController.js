@@ -91,7 +91,6 @@ exports.viewMatpelPengetahuan = async (req, res) => {
       id: { [Op.eq]: KelasId }
     },
   })
-  // ini bug 24/12/2019
   const cek_matpel = await MataPelajaran.findOne({
     where: {
       id: { [Op.eq]: MatpelId }
@@ -212,7 +211,7 @@ exports.actionCreateNilai = async (req, res) => {
   let n_latihan = 60 / 100 * latihan;
   let n_uts = 20 / 100 * uts;
   let n_uas = 20 / 100 * uas;
-  const n_nilai = n_latihan + n_uts + n_uas;
+  const n_nilai = Math.fround(n_latihan + n_uts + n_uas);
   let alphabet;
   let keterangan;
 
@@ -295,7 +294,9 @@ exports.actionCreateNilai = async (req, res) => {
       req.flash('alertMessage', `Sukses Create Nilai`);
       req.flash('alertStatus', 'success');
       res.redirect(`/guru/matpel/input-nilai/${SiswaId}/matpel/${MatpelId}`)
-    })
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
 }

@@ -73,7 +73,7 @@ exports.actionCreate = async (req, res) => {
     res.redirect('/admin/siswa');
   } else {
     User.create({
-      username: nis,
+      username: nama,
       role: 'siswa',
       password: passwordDefault,
       status: 'Active'
