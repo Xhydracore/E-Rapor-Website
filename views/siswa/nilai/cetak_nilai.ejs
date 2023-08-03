@@ -67,7 +67,7 @@
       <tr>
         <td width="20%">Nama Sekolah</td>
         <td width="1%">:</td>
-        <td width="50%" class="tbl">SMP NEGERI ABUNG SURAKARTA</td>
+        <td width="50%" class="tbl">SD IT Mutiara Hati</td>
         <td width="20%">Kelas</td>
         <td width="1%">:</td>
         <td width="19%" class="tbl"><%= siswa.Kela.nama %></td>
@@ -75,7 +75,7 @@
       <tr>
         <td>Alamat Madrasah</td>
         <td>:</td>
-        <td class="tbl">Jl. Pendidikan No.24</td>
+        <td class="tbl">Jl. Mr. Koesbijono Tjondrowibowo RT 04 RW 05, Patemon, Kec. Gunung Pati</td>
         <td>Semester</td>
         <td>:</td>
         <td class="tbl"><%= siswa.Tahun.semester %></td>
@@ -89,9 +89,12 @@
         <td class="tbl"><%= siswa.Tahun.tahun %></td>
       </tr>
       <tr>
-        <td>NIS / NISN</td>
+        <td>NIS</td>
         <td>:</td>
         <td class="tbl"><%= siswa.Siswa.nis %></td>
+        <td>NISN</td>
+        <td>:</td>
+        <td class="tbl"><%= siswa.Siswa.nisn %></td>
         <!-- <td colspan="3">15312376</td> -->
       </tr>
       <tr>
@@ -131,7 +134,6 @@
             <thead>
               <tr>
                 <th colspan="2" rowspan="2" width="30%">Mata Pelajaran</th>
-                <th rowspan="2" width="10%">KKM</th>
                 <th colspan="3">Pengetahuan</th>
                 <th colspan="3">Keterampilan</th>
               </tr>
@@ -154,7 +156,6 @@
               <tr>
                 <td class="ctr"><%= no += 1 %></td>
                 <td><%= kelompok_a[i].nama %></td>
-                <td><%= kelompok_a[i].nilaikkm %></td>
                 <% if(nilai_pengetahuan.length > 0) { %>
                 <% for(var x = 0; x < nilai_pengetahuan.length; x++) { %>
                 <% if(kelompok_a[i].id == nilai_pengetahuan[x].MatpelId) { %>
@@ -192,7 +193,6 @@
               <tr>
                 <td class="ctr"><%= no += 1 %></td>
                 <td><%= kelompok_b[i].nama %></td>
-                <td><%= kelompok_b[i].nilaikkm %></td>
                 <% if(nilai_pengetahuan.length > 0) { %>
                 <% for(var x = 0; x < nilai_pengetahuan.length; x++) { %>
                 <% if(kelompok_b[i].id == nilai_pengetahuan[x].MatpelId) { %>
