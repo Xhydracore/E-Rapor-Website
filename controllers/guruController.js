@@ -107,7 +107,7 @@ exports.actionDelete = (req, res) => {
   Guru.findOne({ where: { id: { [Op.eq]: id } } }).then(async (guru) => {
     let UserId = guru.UserId
     const user = await User.findOne({ where: { id: { [Op.eq]: UserId } } })
-    user.destroy()
+    await user.destroy()
     guru.destroy().then(() => {
       res.redirect('/admin/guru');
     })
