@@ -3,9 +3,9 @@ const dotenv = require("dotenv");
 dotenv.config({ path: ".env" });
 module.exports = {
   development: {
-    username: "postgres",
-    password: "password",
-    database: "e_rapor",
+    username: "Deyndrawan",
+    password: "digital",
+    database: "db_e_raportk13",
     host: "127.0.0.1",
     port: 5432,
     dialect: "postgres",

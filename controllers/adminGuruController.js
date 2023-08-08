@@ -549,11 +549,11 @@ exports.actionChangePassword = async (req, res) => {
         await user.save();
         req.flash('alertMessage', `Success Ubah Password`);
         req.flash('alertStatus', 'success');
-        return res.redirect("/wali-kelas/profile")
+        return res.redirect("/guru/profile")
       } else {
         req.flash('alertMessage', `Password Baru dan Konfirmasi Tidak Cocok !!!`);
         req.flash('alertStatus', 'warning');
-        return res.redirect("/wali-kelas/profile")
+        return res.redirect("/guru/profile")
       }
     } else {
       req.flash('alertMessage', `User Not Found !!!`);
