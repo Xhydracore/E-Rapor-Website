@@ -8,7 +8,10 @@ module.exports = (sequelize, DataTypes) => {
   kelompok_wali_kelas.associate = function (models) {
     // associations can be defined here
     kelompok_wali_kelas.belongsTo(sequelize.models.Guru, {
-      foreignKey: "GuruId"
+      foreignKey: "GuruId",
+      onDelete: 'CASCADE',
+      hooks: true
+
     });
 
     kelompok_wali_kelas.belongsTo(sequelize.models.Tahun, {

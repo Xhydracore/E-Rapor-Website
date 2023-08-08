@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     });
     /** relasi guru */
     kelompok_matpel_guru.belongsTo(sequelize.models.Guru, {
-      foreignKey: "GuruId"
+      foreignKey: "GuruId",
+      onDelete: 'CASCADE',
+      hooks: true
     });
     /** relasi kelas */
     kelompok_matpel_guru.belongsTo(sequelize.models.Kelas, {
