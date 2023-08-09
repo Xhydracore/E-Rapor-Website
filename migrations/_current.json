@@ -546,18 +546,6 @@
                     "onUpdate": "CASCADE",
                     "seqType": "Sequelize.INTEGER"
                 },
-                "latihan": {
-                    "field": "latihan",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "uts": {
-                    "field": "uts",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "uas": {
-                    "field": "uas",
-                    "seqType": "Sequelize.INTEGER"
-                },
                 "ket": {
                     "field": "ket",
                     "seqType": "Sequelize.STRING"
@@ -650,18 +638,6 @@
                     },
                     "onDelete": "NO ACTION",
                     "onUpdate": "CASCADE",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "latihan": {
-                    "field": "latihan",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "uts": {
-                    "field": "uts",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "uas": {
-                    "field": "uas",
                     "seqType": "Sequelize.INTEGER"
                 },
                 "ket": {
@@ -880,7 +856,7 @@
                 },
                 "nis": {
                     "field": "nis",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.BIGINT"
                 },
                 "nama": {
                     "field": "nama",
@@ -888,7 +864,7 @@
                 },
                 "nisn": {
                     "field": "nisn",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.BIGINT"
                 },
                 "jk": {
                     "field": "jk",
@@ -920,42 +896,18 @@
                 },
                 "no_telp": {
                     "field": "no_telp",
-                    "seqType": "Sequelize.STRING"
+                    "seqType": "Sequelize.BIGINT"
                 },
                 "asal_sekolah": {
                     "field": "asal_sekolah",
-                    "seqType": "Sequelize.STRING"
-                },
-                "alamat_asal_sekolah": {
-                    "field": "alamat_asal_sekolah",
                     "seqType": "Sequelize.STRING"
                 },
                 "diterima_kelas": {
                     "field": "diterima_kelas",
                     "seqType": "Sequelize.STRING"
                 },
-                "tgl_diterima": {
-                    "field": "tgl_diterima",
-                    "seqType": "Sequelize.DATE"
-                },
                 "di_terima_semester": {
                     "field": "di_terima_semester",
-                    "seqType": "Sequelize.STRING"
-                },
-                "no_ijazah": {
-                    "field": "no_ijazah",
-                    "seqType": "Sequelize.STRING"
-                },
-                "tahun_ijazah": {
-                    "field": "tahun_ijazah",
-                    "seqType": "Sequelize.STRING"
-                },
-                "no_skhu": {
-                    "field": "no_skhu",
-                    "seqType": "Sequelize.STRING"
-                },
-                "tahun_skhu": {
-                    "field": "tahun_skhu",
                     "seqType": "Sequelize.STRING"
                 },
                 "ortu_ayah": {

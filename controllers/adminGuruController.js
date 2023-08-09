@@ -207,11 +207,13 @@ exports.viewDetailNilai = async (req, res) => {
 
 // nilai pengetahuan
 exports.actionCreateNilai = async (req, res) => {
-  const { latihan, uts, uas, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
-  let n_latihan = 60 / 100 * latihan;
-  let n_uts = 20 / 100 * uts;
-  let n_uas = 20 / 100 * uas;
-  const n_nilai = Math.fround(n_latihan + n_uts + n_uas);
+  // const { latihan, uts, uas, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
+  const { nilai_akhir, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
+  // let n_latihan = 60 / 100 * latihan;
+  // let n_uts = 20 / 100 * uts;
+  // let n_uas = 20 / 100 * uas;
+  // const n_nilai = Math.fround(n_latihan + n_uts + n_uas);
+  const n_nilai = nilai_akhir
   let alphabet;
   let keterangan;
 
@@ -253,9 +255,9 @@ exports.actionCreateNilai = async (req, res) => {
     await cek_rangking.save();
 
     NilaiPengetahuan.create({
-      latihan: latihan,
-      uts: uts,
-      uas: uas,
+      // latihan: latihan,
+      // uts: uts,
+      // uas: uas,
       SiswaId: SiswaId,
       GuruId: GuruId,
       TahunId: TahunId,
@@ -272,9 +274,9 @@ exports.actionCreateNilai = async (req, res) => {
     })
   } else {
     NilaiPengetahuan.create({
-      latihan: latihan,
-      uts: uts,
-      uas: uas,
+      // latihan: latihan,
+      // uts: uts,
+      // uas: uas,
       SiswaId: SiswaId,
       GuruId: GuruId,
       TahunId: TahunId,
@@ -331,6 +333,11 @@ exports.actionDeteleNilai = (req, res) => {
 exports.viewMatpelKeterampilan = async (req, res) => {
   const { KelasId, MatpelId } = req.params
   const userLogin = req.session.user
+  const kelas = await Kelas.findOne({
+    where: {
+      id: { [Op.eq]: KelasId }
+    },
+  })
 
   // ini bug 24/12/2019
   const cek_matpel = await MataPelajaran.findOne({
@@ -359,7 +366,7 @@ exports.viewMatpelKeterampilan = async (req, res) => {
       title: "E-Rapor | Guru",
       user: userLogin,
       kelompok_siswa,
-      kelas: kelompok_siswa[0].Kela.nama,
+      kelas: kelas.nama,
       // ini bug 24/12/2019
       cek_matpel
     })
@@ -445,9 +452,10 @@ exports.viewDetailNilaiKeterampilan = async (req, res) => {
 
 exports.actionCreateKeterampilan = (req, res) => {
   const {
-    latihan,
-    uts,
-    uas,
+    // latihan,
+    // uts,
+    // uas,
+    nilai_akhir,
     SiswaId,
     GuruId,
     TahunId,
@@ -455,11 +463,11 @@ exports.actionCreateKeterampilan = (req, res) => {
     KelasId
   } = req.body
 
-  console.log(latihan, uts, uas, SiswaId, GuruId, TahunId, MatpelId, KelasId)
-  let n_latihan = 60 / 100 * latihan;
-  let n_uts = 20 / 100 * uts;
-  let n_uas = 20 / 100 * uas;
-  const n_nilai = n_latihan + n_uts + n_uas;
+  console.log(SiswaId, GuruId, TahunId, MatpelId, KelasId)
+  // let n_latihan = 60 / 100 * latihan;
+  // let n_uts = 20 / 100 * uts;
+  // let n_uas = 20 / 100 * uas;
+  const n_nilai = nilai_akhir;
   let alphabet;
   let keterangan;
   // console.log(n_latihan)
@@ -480,9 +488,9 @@ exports.actionCreateKeterampilan = (req, res) => {
   }
 
   NilaiKeterampilan.create({
-    latihan: latihan,
-    uts: uts,
-    uas: uas,
+    // latihan: latihan,
+    // uts: uts,
+    // uas: uas,
     SiswaId: SiswaId,
     GuruId: GuruId,
     TahunId: TahunId,

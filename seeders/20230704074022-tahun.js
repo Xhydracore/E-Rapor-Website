@@ -7,7 +7,7 @@ module.exports = {
       "Tahuns",
       [
         {
-          tahun: "2019-2020",
+          tahun: "2018-2019",
           kepala_sekolah: "kepala sekolah",
           nip: "14141241241",
           tgl_raport: new Date(),
@@ -27,7 +27,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          tahun: "2018-2019",
+          tahun: "2019-2020",
           status: "Nonactive",
           kepala_sekolah: "kepala sekolah",
           nip: "14141241241",

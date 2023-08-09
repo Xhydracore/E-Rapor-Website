@@ -2,9 +2,9 @@
 
 module.exports = (sequelize, DataTypes) => {
   const Siswa = sequelize.define('Siswa', {
-    nis: DataTypes.INTEGER,
+    nis: DataTypes.BIGINT,
     nama: DataTypes.STRING,
-    nisn: DataTypes.INTEGER,
+    nisn: DataTypes.BIGINT,
     jk: DataTypes.STRING,
     tgl_lahir: DataTypes.DATE,
     tmpt_lahir: DataTypes.STRING,
@@ -12,16 +12,16 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     anak_ke: DataTypes.STRING,
     alamat: DataTypes.STRING,
-    no_telp: DataTypes.STRING,
+    no_telp: DataTypes.BIGINT,
     asal_sekolah: DataTypes.STRING,
-    alamat_asal_sekolah: DataTypes.STRING,
+    // alamat_asal_sekolah: DataTypes.STRING,
     diterima_kelas: DataTypes.STRING,
-    tgl_diterima: DataTypes.DATE,
+    // tgl_diterima: DataTypes.DATE,
     di_terima_semester: DataTypes.STRING,
-    no_ijazah: DataTypes.STRING,
-    tahun_ijazah: DataTypes.STRING,
-    no_skhu: DataTypes.STRING,
-    tahun_skhu: DataTypes.STRING,
+    // no_ijazah: DataTypes.STRING,
+    // tahun_ijazah: DataTypes.STRING,
+    // no_skhu: DataTypes.STRING,
+    // tahun_skhu: DataTypes.STRING,
     ortu_ayah: DataTypes.STRING,
     ortu_ibu: DataTypes.STRING,
     alamat_ortu: DataTypes.STRING,
@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       siswa.jk = siswa.jk.toUpperCase();
       siswa.tmpt_lahir = siswa.tmpt_lahir.toUpperCase();
       siswa.agama = siswa.agama.toUpperCase();
-      siswa.alamat_asal_sekolah = siswa.alamat_asal_sekolah.toUpperCase();
+      // siswa.alamat_asal_sekolah = siswa.alamat_asal_sekolah.toUpperCase();
       siswa.alamat = siswa.alamat.toUpperCase();
       siswa.asal_sekolah = siswa.asal_sekolah.toUpperCase();
       siswa.ortu_ayah = siswa.ortu_ayah.toUpperCase();

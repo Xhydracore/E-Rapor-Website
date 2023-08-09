@@ -7,6 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING
   }, {});
   User.associate = function(models) {
+    User.beforeCreate(user=>{
+      user.username = user.username.toUpperCase();
+    })
     // associations can be defined here
   };
   return User;

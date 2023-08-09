@@ -173,11 +173,11 @@ exports.viewDetailNilai = async (req, res) => {
 
 // nilai pengetahuan
 exports.actionCreateNilai = async (req, res) => {
-  const { latihan, uts, uas, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
-  let n_latihan = 60 / 100 * latihan;
-  let n_uts = 20 / 100 * uts;
-  let n_uas = 20 / 100 * uas;
-  const n_nilai = n_latihan + n_uts + n_uas;
+  const { nilai_akhir, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
+  // let n_latihan = 60 / 100 * latihan;
+  // let n_uts = 20 / 100 * uts;
+  // let n_uas = 20 / 100 * uas;
+  const n_nilai = nilai_akhir;
   let alphabet;
   let keterangan;
   // console.log(n_latihan)
@@ -218,9 +218,9 @@ exports.actionCreateNilai = async (req, res) => {
     await cek_rangking.save();
 
     NilaiPengetahuan.create({
-      latihan: latihan,
-      uts: uts,
-      uas: uas,
+      // latihan: latihan,
+      // uts: uts,
+      // uas: uas,
       SiswaId: SiswaId,
       GuruId: GuruId,
       TahunId: TahunId,
@@ -237,9 +237,9 @@ exports.actionCreateNilai = async (req, res) => {
     })
   } else {
     NilaiPengetahuan.create({
-      latihan: latihan,
-      uts: uts,
-      uas: uas,
+      // latihan: latihan,
+      // uts: uts,
+      // uas: uas,
       SiswaId: SiswaId,
       GuruId: GuruId,
       TahunId: TahunId,
@@ -399,11 +399,11 @@ exports.viewDetailNilaiKeterampilan = async (req, res) => {
 }
 
 exports.actionCreateNilaiKeterampilan = (req, res) => {
-  const { latihan, uts, uas, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
-  let n_latihan = 60 / 100 * latihan;
-  let n_uts = 20 / 100 * uts;
-  let n_uas = 20 / 100 * uas;
-  const n_nilai = n_latihan + n_uts + n_uas;
+  const { nilai_akhir, SiswaId, GuruId, TahunId, MatpelId, KelasId } = req.body
+  // let n_latihan = 60 / 100 * latihan;
+  // let n_uts = 20 / 100 * uts;
+  // let n_uas = 20 / 100 * uas;
+  const n_nilai = nilai_akhir;
   let alphabet;
   let keterangan;
   // console.log(n_latihan)
@@ -424,9 +424,9 @@ exports.actionCreateNilaiKeterampilan = (req, res) => {
   }
 
   NilaiKeterampilan.create({
-    latihan: latihan,
-    uts: uts,
-    uas: uas,
+    // latihan: latihan,
+    // uts: uts,
+    // uas: uas,
     SiswaId: SiswaId,
     GuruId: GuruId,
     TahunId: TahunId,

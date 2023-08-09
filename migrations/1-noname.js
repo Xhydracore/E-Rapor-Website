@@ -28,7 +28,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "noname",
-    "created": "2023-07-17T04:19:52.616Z",
+    "created": "2023-08-08T08:29:38.557Z",
     "comment": ""
 };
 
@@ -365,7 +365,7 @@ var migrationCommands = function(transaction) {
                         "allowNull": false
                     },
                     "nis": {
-                        "type": Sequelize.INTEGER,
+                        "type": Sequelize.BIGINT,
                         "field": "nis"
                     },
                     "nama": {
@@ -373,7 +373,7 @@ var migrationCommands = function(transaction) {
                         "field": "nama"
                     },
                     "nisn": {
-                        "type": Sequelize.INTEGER,
+                        "type": Sequelize.BIGINT,
                         "field": "nisn"
                     },
                     "jk": {
@@ -405,44 +405,20 @@ var migrationCommands = function(transaction) {
                         "field": "alamat"
                     },
                     "no_telp": {
-                        "type": Sequelize.STRING,
+                        "type": Sequelize.BIGINT,
                         "field": "no_telp"
                     },
                     "asal_sekolah": {
                         "type": Sequelize.STRING,
                         "field": "asal_sekolah"
                     },
-                    "alamat_asal_sekolah": {
-                        "type": Sequelize.STRING,
-                        "field": "alamat_asal_sekolah"
-                    },
                     "diterima_kelas": {
                         "type": Sequelize.STRING,
                         "field": "diterima_kelas"
                     },
-                    "tgl_diterima": {
-                        "type": Sequelize.DATE,
-                        "field": "tgl_diterima"
-                    },
                     "di_terima_semester": {
                         "type": Sequelize.STRING,
                         "field": "di_terima_semester"
-                    },
-                    "no_ijazah": {
-                        "type": Sequelize.STRING,
-                        "field": "no_ijazah"
-                    },
-                    "tahun_ijazah": {
-                        "type": Sequelize.STRING,
-                        "field": "tahun_ijazah"
-                    },
-                    "no_skhu": {
-                        "type": Sequelize.STRING,
-                        "field": "no_skhu"
-                    },
-                    "tahun_skhu": {
-                        "type": Sequelize.STRING,
-                        "field": "tahun_skhu"
                     },
                     "ortu_ayah": {
                         "type": Sequelize.STRING,
@@ -933,18 +909,6 @@ var migrationCommands = function(transaction) {
                         "allowNull": true,
                         "field": "KelasId"
                     },
-                    "latihan": {
-                        "type": Sequelize.INTEGER,
-                        "field": "latihan"
-                    },
-                    "uts": {
-                        "type": Sequelize.INTEGER,
-                        "field": "uts"
-                    },
-                    "uas": {
-                        "type": Sequelize.INTEGER,
-                        "field": "uas"
-                    },
                     "ket": {
                         "type": Sequelize.STRING,
                         "field": "ket"
@@ -1043,18 +1007,6 @@ var migrationCommands = function(transaction) {
                         },
                         "allowNull": true,
                         "field": "KelasId"
-                    },
-                    "latihan": {
-                        "type": Sequelize.INTEGER,
-                        "field": "latihan"
-                    },
-                    "uts": {
-                        "type": Sequelize.INTEGER,
-                        "field": "uts"
-                    },
-                    "uas": {
-                        "type": Sequelize.INTEGER,
-                        "field": "uas"
                     },
                     "ket": {
                         "type": Sequelize.STRING,
