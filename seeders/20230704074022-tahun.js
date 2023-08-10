@@ -7,35 +7,24 @@ module.exports = {
       "Tahuns",
       [
         {
-          tahun: "2018-2019",
-          kepala_sekolah: "kepala sekolah",
+          tahun: "2022-2023",
+          kepala_sekolah: "Gita Ria Octafia S.Pd., Gr.",
           nip: "14141241241",
           tgl_raport: new Date(),
-          semester: "Satu",
+          semester: "1",
           status: "Active",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },
-        {
-          tahun: "2018-2019",
-          status: "Nonactive",
-          kepala_sekolah: "kepala sekolah",
+        },{
+          tahun: "2022-2023",
+          kepala_sekolah: "Gita Ria Octafia S.Pd., Gr.",
           nip: "14141241241",
-          semester: "Dua",
           tgl_raport: new Date(),
+          semester: "2",
+          status: "Active",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },
-        {
-          tahun: "2019-2020",
-          status: "Nonactive",
-          kepala_sekolah: "kepala sekolah",
-          nip: "14141241241",
-          semester: "Satu",
-          tgl_raport: new Date(),
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
+        }
       ],
       {}
     );
