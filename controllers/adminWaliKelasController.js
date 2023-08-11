@@ -214,7 +214,8 @@ exports.actionCreateNilai = async (req, res) => {
 
   if (cek_rangking) {
     // update nilai saat di delete
-    cek_rangking.totalNilai += n_nilai;
+    cek_rangking.totalNilai += parseInt(nilai_akhir);
+    console.log(cek_rangking.totalNilai);
     await cek_rangking.save();
 
     NilaiPengetahuan.create({

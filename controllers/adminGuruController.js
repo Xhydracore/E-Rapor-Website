@@ -212,8 +212,7 @@ exports.actionCreateNilai = async (req, res) => {
   // let n_latihan = 60 / 100 * latihan;
   // let n_uts = 20 / 100 * uts;
   // let n_uas = 20 / 100 * uas;
-  // const n_nilai = Math.fround(n_latihan + n_uts + n_uas);
-  const n_nilai = nilai_akhir
+  let n_nilai = nilai_akhir;
   let alphabet;
   let keterangan;
 
@@ -251,7 +250,7 @@ exports.actionCreateNilai = async (req, res) => {
 
   if (cek_rangking) {
     // update nilai saat di delete
-    cek_rangking.totalNilai += n_nilai;
+    cek_rangking.totalNilai += parseInt(nilai_akhir);
     await cek_rangking.save();
 
     NilaiPengetahuan.create({
