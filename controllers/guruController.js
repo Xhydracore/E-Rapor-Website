@@ -61,14 +61,14 @@ exports.actionCreate = async (req, res) => {
       }).catch((err) => {
         req.flash('alertMessage', err.message);
         req.flash('alertStatus', 'danger');
-        res.redirect("/admin/siswa")
+        res.redirect("/admin/guru")
         console.log(err)
       });
     }
   } catch (error) {
     req.flash('alertMessage', err.message);
     req.flash('alertStatus', 'danger');
-    res.redirect("/admin/siswa")
+    res.redirect("/admin/guru")
     console.log(error)
   }
 }

@@ -1033,9 +1033,8 @@
             "tableName": "Users",
             "schema": {
                 "id": {
-                    "allowNull": false,
-                    "primaryKey": true,
                     "autoIncrement": true,
+                    "primaryKey": true,
                     "field": "id",
                     "seqType": "Sequelize.INTEGER"
                 },
@@ -1069,5 +1068,5 @@
             "indexes": []
         }
     },
-    "revision": 1
+    "revision": 2
 }

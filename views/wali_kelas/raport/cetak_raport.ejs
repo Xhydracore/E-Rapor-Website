@@ -57,26 +57,24 @@
     </thead>
 
     <tbody>
-      <tr>
-      <tr>
         <td colspan="6" style="text-align: center; font-weight: bold">
           <p>
-            <h3>LAPORAN HASIL BELAJAR</h3>
+            <h3>HASIL PENCAPAIAN KOMPETENSI PESERTA DIDIK</h3>
           </p>
         </td>
       </tr>
       <tr>
         <td width="20%">Nama Sekolah</td>
         <td width="1%">:</td>
-        <td width="50%" class="tbl">SD IT Mutiara Hati</td>
+        <td width="50%" class="tbl">SD IT MUTIARA HATI SEMARANG</td>
         <td width="20%">Kelas</td>
         <td width="1%">:</td>
         <td width="19%" class="tbl"><%= siswa.Kela.nama %></td>
       </tr>
       <tr>
-        <td>Alamat Madrasah</td>
+        <td>Alamat</td>
         <td>:</td>
-        <td class="tbl">Jl. Mr. Koesbijono Tjondrowibowo RT 04 RW 05, Patemon, Kec. Gunung Pati</td>
+        <td class="tbl">Jl. Mr. Koesbijono Condrowibowo RT. 03 RW. 05</td>
         <td>Semester</td>
         <td>:</td>
         <td class="tbl"><%= siswa.Tahun.semester %></td>
@@ -90,18 +88,15 @@
         <td class="tbl"><%= siswa.Tahun.tahun %></td>
       </tr>
       <tr>
-        <td>NIS</td>
+        <td>NIS / NISN</td>
         <td>:</td>
         <td class="tbl"><%= siswa.Siswa.nis %></td>
-        <td>NISN</td>
-        <td>:</td>
-        <td class="tbl"><%= siswa.Siswa.nisn %></td>
         <!-- <td colspan="3">15312376</td> -->
       </tr>
       <tr>
         <td colspan="6"><br><br></td>
       </tr>
-      <!-- <tr>
+      <tr>
         <td colspan="6"><b>A. Sikap</b></td>
       </tr>
       <tr>
@@ -125,24 +120,25 @@
             </tr>
           </table>
         </td>
-      </tr> -->
-      <!-- <tr>
-        <td colspan="6"><b>A. Pengetahuan dan Keterampilan</b></td>
-      </tr> -->
+      </tr>
+      <tr>
+        <td colspan="6"><b>B. Pengetahuan dan Keterampilan</b></td>
+      </tr>
       <tr>
         <td colspan="6">
           <table class="table">
             <thead>
               <tr>
-                <th colspan="2" rowspan="2" width="30%">Muatan Pelajaran</th>
+                <th colspan="2" rowspan="2" width="30%">Mata Pelajaran</th>
+                <th rowspan="2" width="10%">KKM</th>
                 <th colspan="3">Pengetahuan</th>
                 <th colspan="3">Keterampilan</th>
               </tr>
               <tr>
-                <th width="5%">Nilai Akhir</th>
+                <th width="5%">Angka</th>
                 <th width="5%">Predikat</th>
                 <th width="25%">Deskripsi</th>
-                <th width="5%">Nilai Akhir</th>
+                <th width="5%">Angka</th>
                 <th width="5%">Predikat</th>
                 <th width="25%">Deskripsi</th>
               </tr>
@@ -157,6 +153,7 @@
               <tr>
                 <td class="ctr"><%= no += 1 %></td>
                 <td><%= kelompok_a[i].nama %></td>
+                <td><%= kelompok_a[i].nilaikkm %></td>
                 <% if(nilai_pengetahuan.length > 0) { %>
                 <% for(var x = 0; x < nilai_pengetahuan.length; x++) { %>
                 <% if(kelompok_a[i].id == nilai_pengetahuan[x].MatpelId) { %>
@@ -164,11 +161,15 @@
                 <td class="ctr"><%= nilai_pengetahuan[x].nilai %></td>
                 <td class="ctr"><%= nilai_pengetahuan[x].ket %></td>
                 <% } else { %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% } %>
                 <% } else{ %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% if(nilai_keterampilan.length > 0) { %>
                 <% for(var z = 0; z < nilai_keterampilan.length; z++) { %>
@@ -177,11 +178,15 @@
                 <td class="ctr"><%= nilai_keterampilan[z].nilai %></td>
                 <td class="ctr"><%= nilai_keterampilan[z].ket %></td>
                 <% } else { %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% } %>
                 <% } else{ %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
               </tr>
               <% } %>
@@ -194,6 +199,7 @@
               <tr>
                 <td class="ctr"><%= no += 1 %></td>
                 <td><%= kelompok_b[i].nama %></td>
+                <td><%= kelompok_b[i].nilaikkm %></td>
                 <% if(nilai_pengetahuan.length > 0) { %>
                 <% for(var x = 0; x < nilai_pengetahuan.length; x++) { %>
                 <% if(kelompok_b[i].id == nilai_pengetahuan[x].MatpelId) { %>
@@ -201,11 +207,15 @@
                 <td class="ctr"><%= nilai_pengetahuan[x].nilai %></td>
                 <td class="ctr"><%= nilai_pengetahuan[x].ket %></td>
                 <% } else { %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% } %>
                 <% } else{ %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% if(nilai_keterampilan.length > 0) { %>
                 <% for(var z = 0; z < nilai_keterampilan.length; z++) { %>
@@ -214,15 +224,18 @@
                 <td class="ctr"><%= nilai_keterampilan[z].nilai %></td>
                 <td class="ctr"><%= nilai_keterampilan[z].ket %></td>
                 <% } else { %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
                 <% } %>
                 <% } else{ %>
-
+                <!-- <td class="ctr">-</td>
+                <td class="ctr">-</td>
+                <td class="font_kecil">-</td> -->
                 <% } %>
               </tr>
               <% } %>
-
               <tr>
                 <td colspan="9"></td>
               </tr>
@@ -248,6 +261,7 @@
           </table>
         </td>
       </tr>
+
       <tr>
         <td colspan="6"><br><b>C. Ekstrakurikuler</b></td>
       </tr>
@@ -264,7 +278,7 @@
             </thead>
             <tbody>
               <!-- lopping ektrakulikuler  -->
-              <% if(view !== "Kosong"){ %>
+              <% if(ekstra !== null){ %>
               <% for (let i = 0; i < ekstra.length; i++ ) { %>
               <tr>
                 <td><%= i + 1 %></td>
@@ -304,7 +318,7 @@
               <tr>
                 <td><%= i + 1 %></td>
                 <td>
-                  <%= prestasi[i].ket %> <%= prestasi[i].jenis %>
+                  <%= prestasi[i].jenis %> <%= prestasi[i].ket %>
                 </td>
               </tr>
               <% } %>
@@ -326,7 +340,7 @@
         </table>
       </tr>
 
-      <!-- <tr>
+      <tr>
         <td><br><b>F. Tanggapan Orang Tua / Wali</b></td>
       </tr>
       <tr>
@@ -337,7 +351,7 @@
             </tr>
           </thead>
         </table>
-      </tr> -->
+      </tr>
       </td>
       </tr>
 
@@ -371,6 +385,7 @@
           </table>
         </td>
       </tr>
+
       <tr>
         <td colspan="6">
           <br><br>
@@ -402,7 +417,7 @@
           </table>
 
         </td>
-      </tr>   
+      </tr>
     </tbody>
   </table>
 </body>
