@@ -59,10 +59,16 @@ exports.actionCreate = async (req, res) => {
           res.redirect("/admin/guru")
         })
       }).catch((err) => {
-        res.redirect("/admin/guru")
+        req.flash('alertMessage', err.message);
+        req.flash('alertStatus', 'danger');
+        res.redirect("/admin/siswa")
+        console.log(err)
       });
     }
   } catch (error) {
+    req.flash('alertMessage', err.message);
+    req.flash('alertStatus', 'danger');
+    res.redirect("/admin/siswa")
     console.log(error)
   }
 }
